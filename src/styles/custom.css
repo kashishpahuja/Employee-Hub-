@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* General Styles */
+.app-background {
+  background-color: #E0E1DD;
+  min-height: 100vh;
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* Employee List Styling */
+.bg-custom {
+  background-color: #E0E1DD;
+}
+
+.text-primary {
+  color: #415A77;
+}
+
+.text-danger {
+  color: #778DA9;
+}
+
+.table-custom {
+  background-color: #1B263B;
+}
+
+.table-dark {
+  background-color: #1B263B;
+}
+
+.table-dark th,
+.table-dark td {
+  color: #E0E1DD;
+}
+
+.btn-custom {
+  color: #E0E1DD;
+}
+
+.btn-custom:hover {
+  background-color: #415A77;
+  color: #E0E1DD;
+}
+
+.btn-light {
+  color: #E0E1DD;
+  border-color: #415A77;
+}
+
+.border-primary {
+  border-color: #415A77 !important;
+}
+
+.border-warning {
+  border-color: #778DA9 !important;
+}
+
+.border-danger {
+  border-color: #E0E1DD !important;
+}
+
+.card-custom {
+  background-color: #1B263B;
+  color: #E0E1DD;
+}
+
+.card-custom .card-title {
+  color: #415A77;
+}
+
+/* Update Employee Page Styling */
+.container {
+  background-color: #E0E1DD;
+  color: #0D1B2A;
+}
+
+.text-primary {
+  color: #415A77;
+}
+
+.text-white {
+  color: #E0E1DD;
+}
+
+.bg-dark {
+  background-color: #1B263B;
+}
+
+.card {
+  background-color: #1B263B;
+}
+
+.card-body {
+  color: #E0E1DD;
+}
+
+.form-control {
+  background-color: #415A77;
+  color: #E0E1DD;
+  border: 1px solid #778DA9;
+}
+
+.form-control:focus {
+  border-color: #778DA9;
+  box-shadow: 0 0 0 0.2rem rgba(119, 141, 169, 0.25);
+}
+
+.btn-primary {
+  background-color: #0D1B2A;
+  border-color: #0D1B2A;
+}
+
+.btn-primary:hover {
+  background-color: #415A77;
+  border-color: #415A77;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(65, 90, 119, 0.5);
+}
+
+/* Employee Details Page Styling */
+.text-warning {
+  color: #778DA9;
+}
+
+.card-title {
+  color: #778DA9;
+}
+
+.card-body {
+  color: #E0E1DD;
+}
+
+.btn-warning {
+  background-color: #abcdef;
+  border-color: #415A77;
+}
+
+.btn-warning:hover {
+  background-color: #778DA9;
+  border-color: #778DA9;
+}
+
+.btn-warning:focus, .btn-warning.focus {
+  box-shadow: 0 0 0 0.2rem rgba(119, 141, 169, 0.5);
+}
+
+/* Add Employee Page Styling */
+.bg-dark {
+  background-color: #0D1B2A;
+}
+
+.text-warning {
+  color: #778DA9;
+}
+
+.card {
+  background-color: #1B263B;
+}
+
+.card-title {
+  color: #778DA9;
+}
+
+.card-body {
+  color: #E0E1DD;
+}
+
+.btn-primary {
+  background-color: #415A77;
+  border-color: #415A77;
+}
+
+.btn-primary:hover {
+  background-color: #778DA9;
+  border-color: #778DA9;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(119, 141, 169, 0.5);
+}
