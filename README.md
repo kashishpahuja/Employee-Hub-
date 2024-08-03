@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+Employee Hub - Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
+Employee Hub is a comprehensive employee management system built to streamline the process of handling employee records. The application allows users to add new employees, view a list of all employees, view detailed information about each employee, edit employee details, and delete employees as needed.
 
-## Available Scripts
+## Key Features
+*Add Employees: Easily add new employees with their details such as name, email, phone number, and address.
+*View Employees: Display a list of all employees with basic information.
+*Employee Details: View detailed information for each employee including contact details and address.
+*Edit Employees: Modify existing employee information ensuring data remains up-to-date.
+*Delete Employees: Remove employees from the system when they are no longer part of the organization.
+*Email Validation: Ensure email addresses are unique and properly formatted.
+*Responsive Design: The application is fully responsive and works well on various devices and screen sizes.
+*Clean Code: The project follows best practices for clean, maintainable, and well-documented code.
 
-In the project directory, you can run:
+##Tech Stack
 
-### `npm start`
+*Frontend:
+React.js: For building the user interface.
+Bootstrap CSS: For responsive and aesthetically pleasing design.
+React Router: For navigation and routing.
+React Toastify: For notifications.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*Backend:
+Cosmocloud API: For managing employee data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to Set Up Locally and Run
 
-### `npm test`
+1. **Clone the Repository:**
+   git clone https://github.com/your-username/Employee-Hub.git
+2. Install Dependencies:
+   npm install
+3. Run the Application:
+   npm start
+4. Open your browser and visit:
+   http://localhost:3000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributing
+Feel free to fork the repository and make a pull request. For any issues or feature requests, please open an issue on GitHub.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the MIT License.
