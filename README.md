@@ -1,5 +1,4 @@
-Employee Hub - Project Overview
-
+Employee Hub - [React JS, Bootstrap CSS, cosmocloud API]
 ## Project Description
 Employee Hub is a comprehensive employee management system built to streamline the process of handling employee records. The application allows users to add new employees, view a list of all employees, view detailed information about each employee, edit employee details, and delete employees as needed.
 
