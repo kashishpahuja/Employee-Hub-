@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { getEmployeeById, updateEmployee } from '../api/employeeData';
-import {toast, Bounce} from 'react-toastify';
+import { getEmployeeById, updateEmployee, getEmployees } from '../api/employeeData'; // Import getEmployees
+import { toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function UpdateEmployee() {
@@ -19,6 +19,7 @@ function UpdateEmployee() {
             phone: ''
         }
     });
+    const [employees, setEmployees] = useState([]); // State to store all employees
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
@@ -35,7 +36,18 @@ function UpdateEmployee() {
                 setLoading(false);
             }
         };
+        
+        const fetchEmployees = async () => {
+            try {
+                const data = await getEmployees();
+                setEmployees(data.data);
+            } catch (error) {
+                console.error('Error fetching employees', error);
+            }
+        };
+
         fetchEmployee();
+        fetchEmployees();
     }, [employeeId]);
 
     const handleInputChange = (e) => {
@@ -58,8 +70,44 @@ function UpdateEmployee() {
         }
     };
 
+    const isEmailValid = (email) => {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+
     const handleUpdate = async (e) => {
         e.preventDefault();
+        if (!isEmailValid(employee.contactMethods.email)) {
+            toast.error('Invalid email address format. Please enter a valid email.', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            });
+            return;
+        }
+
+        const emailExists = employees.find(emp => emp._id !== employeeId && emp.contactMethods.email === employee.contactMethods.email);
+        if (emailExists) {
+            toast.error('Email already in use', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            });
+            return;
+        }
+
         try {
             console.log("Updating employee with data: ", JSON.stringify(employee, null, 2));
             await updateEmployee(employeeId, employee);
@@ -117,7 +165,7 @@ function UpdateEmployee() {
                                 <div className="mb-3">
                                     <label className="form-label">Phone Number</label>
                                     <input
-                                        type="text" // Changed to text
+                                        type="text"
                                         name="contactMethods.phone"
                                         value={employee.contactMethods.phone}
                                         onChange={handleInputChange}
@@ -161,7 +209,7 @@ function UpdateEmployee() {
                                 <div className="mb-3">
                                     <label className="form-label">Zip Code</label>
                                     <input
-                                        type="text" // Changed to text
+                                        type="text"
                                         name="address.zipCode"
                                         value={employee.address.zipCode}
                                         onChange={handleInputChange}
